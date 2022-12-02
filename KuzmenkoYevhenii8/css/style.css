@@ -109,6 +109,12 @@ ol, ul {
     margin-right: 51%;
 }
 
+.projects__wrap,
+.projects__item {
+    display: flex;
+    color: #FFFFFF;
+}
+
 .primary {
     width: 49%;
     padding-bottom: 100px;
