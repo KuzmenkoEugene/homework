@@ -12,12 +12,12 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 16px; /* 1 rem = 16px */
 }
 
 body {
-    font-size: 1rem;
-    line-height: 1;
+    font-size: 1rem; /* Размер шрифта теперь в rem */
+    line-height: 1; /* Высота строки */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Добавил нужный мне шрифт "Roboto" */
 }
 
@@ -95,30 +95,36 @@ ol, ul {
     text-decoration: none;
 }
 
+/* При наведении курсора кнопка меняет цвет, переход занимает 1 секунду */
 .hero__btn:hover {
     background-color:#000000;
     transition: 1s all;
 }
 
+/* Выравнивание текста "Lorem" по центру, правильное расположение относительно блока */
 .primary {
-   width: 23%;
-   margin: 0 auto;
-   height: 3,5%;
-   text-align: center;
+    width: 23%;
+    margin: 0 auto;
+    height: 3,5%;
+    text-align: center;
 }
 
+/* Для текста сделал внешний отступ снизу и слева */
 .hero__text {
     margin: 0 0 5% 21%;
 }
 
+/* Для текста сделал внешний отступ снизу */
 .about__text {
     margin-bottom: 5%;
 }
 
+/* Для текста сделал внешний отступ снизу */
 .work__text {
     margin-bottom: 2.8%;
 }
 
+/* Задал нужное мне расположение с помощью "Flex", текст становится белым */
 .wrapper .projects__wrap,
 .projects__wrap,
 .projects__item,
@@ -127,24 +133,25 @@ ol, ul {
     color: #FFFFFF;
 }
 
+/* Задал нужное расположение для иконок с текстом */
 .wrapper .projects__wrap,
 .projects__item {
     justify-content: space-around;
 }
 
+/* Задал нужное мне расположение для текста возле иконок */
 .projects__description {
     justify-content: space-between;
-}
-
-.projects__wrap {
-    padding: 5% 21%;
-}
-
-.projects__description {
     flex-direction: column;
     padding-left: 5%;
 }
 
+/* Задал внутренние отступы для увелечения блока */
+.projects__wrap {
+    padding: 5% 21%;
+}
+
+/* Для заголовка задал нужный размер, толщину, расположение в блоке */
 .about__title,
 .work__title {
     width: 21%;
@@ -155,28 +162,33 @@ ol, ul {
     font-weight: 500;
 }
 
+/* С помощью flex задал нужное расположение(по центру), сделал отступ */
 .video-wrap {
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
 }
 
+/* Задал размер видео */
 .video {
     width: 58%;
     height: 600px;
 }
 
+/* Основной цвет текста в footer теперь белый, с помощью padding сделал нужный мне размер блока */
 .footer-wrap {
     padding: 2% 0 2% 21%;
     color: #FFFFFF;
 }
 
+/* Повысил толщину текста, отступ снизу, задал размер p в div */
 .footer__text {
     width: 7%;
     margin-bottom: 1.5%;
     font-weight: 500;
 }
 
+/* Уменьшил шрифт, задал размер блока */
 .footer__info {
     width: 11%;
     font-size: 0.7rem;
