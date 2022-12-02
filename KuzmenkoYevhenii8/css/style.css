@@ -1,3 +1,4 @@
+/* Добавил сброс стилей для моей страницы */
 *,
 *::before,
 *::after {
@@ -17,26 +18,19 @@ html {
 body {
     font-size: 1rem;
     line-height: 1;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Добавил нужный мне шрифт "Roboto" */
 }
 
 ol, ul {
     list-style: none;
 }
 
-/* MAIN */
-.wrapper,
-.footer-wrap {
-    width: 58%;
-    outline: 1px solid green;
+/* Задал ширину блока */
+.wrapper {
+    width: 100%;
 }
 
-.wrapper,
-.primary,
-.footer-wrap {
-    margin: 0 auto;
-}
-
+/* Задал позиционирование с помощью Flex */
 .about>.wrapper,
 .work>.wrapper,
 .footer>.wrapper {
@@ -45,129 +39,145 @@ ol, ul {
     justify-content: center;
 }
 
-/* HEADER */
-
-.header .wrapper {
+/* Задал фон для блока projects и footer, а так же для кнопки */
+.projects .wrapper,
+.footer .footer-wrap,
+.hero__btn {
+    background: #34547A;
+}
+/* Задал нужный цвет для блока header и work */
+.header .wrapper,
+.work .wrapper {
     background-color: #eeeff1;
-    padding: 79px 0 162px;
 }
 
-.menu-wrap {
-    margin-bottom: 5.5%;
-    margin-left: 21%;
-    padding-top: 2%;
+/* С помощью padding сделал отступ как на макете */
+.header .wrapper {
+    padding-top: 5%;
 }
 
+/* Для списка меню задал позиционирование, ширину отступы */
 .menu {
-    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 32%;
+    margin: 0 47% 10% 21%;
 }
 
-.menu>.menu__item {
-    display: inline-block;
-    font-size: 1rem;
-    margin-right: 3.8%;
-}
-
+/* Все буквы с становятся большими, убираю подчеркивание ссылок, цвет шрифта черный */
 .menu>.menu__item>.menu__link {
     text-transform: uppercase;
     text-decoration: none;
     color: #000000;
 }
 
-.menu>.menu___item>.menu__link--current {
+/* При наведении ссылка меняет цвет и появляется подчёркивание */
+.menu__item .menu__link:hover {
     color: #34547A;
+    text-decoration: underline;
 }
 
-.menu>.menu__item>.menu__link:hover {
-    color: #ac6f14;
-}
-
-.hero {
-    margin-left: 21%;
-}
-
+/* Задаю отступы, ширину и размер текста */
 .hero__title {
+    margin: 0 0 4% 21%;
+    width: 28%;
     font-size: 3rem;
-    margin-bottom: 6%;
     font-weight: bold;
 }
 
+/* Задал отступы, размер кнопки, убрал подчеркивание и цвет, ведет себя как блочный и строчный элемент с помощью inline-block */
 .hero__btn {
+    margin: 0 0 12% 21%;
     display: inline-block;
     padding: 20px 41px;
-    margin-bottom: 10%;
-    background: #34547A;
-    color: white;
+    color:#FFFFFF;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-.hero__text {
-    outline: 1px solid green;
-    padding: 7.5%, 13%;
-    margin-bottom: 3%;
-    margin-right: 51%;
+.hero__btn:hover {
+    background-color:#000000;
+    transition: 1s all;
 }
 
+.primary {
+   width: 23%;
+   margin: 0 auto;
+   height: 3,5%;
+   text-align: center;
+}
+
+.hero__text {
+    margin: 0 0 5% 21%;
+}
+
+.about__text {
+    margin-bottom: 5%;
+}
+
+.work__text {
+    margin-bottom: 2.8%;
+}
+
+.wrapper .projects__wrap,
 .projects__wrap,
-.projects__item {
+.projects__item,
+.projects__description {
     display: flex;
     color: #FFFFFF;
 }
 
-.primary {
-    width: 49%;
-    padding-bottom: 100px;
-    text-align: center;
+.wrapper .projects__wrap,
+.projects__item {
+    justify-content: space-around;
 }
 
-.video-wrap {
-    display: flex;
-    justify-content: center;
+.projects__description {
+    justify-content: space-between;
+}
+
+.projects__wrap {
+    padding: 5% 21%;
+}
+
+.projects__description {
+    flex-direction: column;
+    padding-left: 5%;
 }
 
 .about__title,
 .work__title {
-    outline: 1px solid green;
-    margin-top: 100px;
-    margin-bottom: 37px;
+    width: 21%;
+    height: 2%;
+    margin: 6% 39% 3%;
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.projects .wrapper,
-.footer .footer-wrap {
-    background: #34547A;
-}
-
-.projects__wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 .video-wrap {
-    margin-bottom: 70px;
-} 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
 
 .video {
     width: 58%;
-    height: 400px;
+    height: 600px;
+}
+
+.footer-wrap {
+    padding: 2% 0 2% 21%;
+    color: #FFFFFF;
 }
 
 .footer__text {
-    padding-top: 50px;
-    padding-left: 21%;
-    color: #FFFFFF;
-    font-size: 1.3rem;
+    width: 7%;
+    margin-bottom: 1.5%;
     font-weight: 500;
 }
 
 .footer__info {
-    padding-top: 30px;
-    padding-left: 21%;
-    padding-bottom: 50px;
-    color: #FFFFFF;
-    font-size: 0.8rem;
+    width: 11%;
+    font-size: 0.7rem;
 }
